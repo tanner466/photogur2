@@ -1,0 +1,6 @@
+
+<%= link_to "Back to Images", images_url %> | <%= link_to "Edit", edit_image_path(@image) %>
+
+<h3>Title: <%= @image.title %></h3>
+<h3>Author: <%= @image.author %></h3>
+<img src = "<%= @image.url %>">

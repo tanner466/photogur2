@@ -1,0 +1,22 @@
+<h1>Edit Image</h1>
+
+<%= link_to "View All Images", "/images" %> | <%= link_to "Back To Image", image_path(@image) %>
+
+<%= form_for @image, method: "patch" do |f| %>
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author, value: @image.author %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, value: @image.title %>
+  </div>
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url, value: @image.url %>
+  </div>
+
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>
